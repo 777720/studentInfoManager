@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+	id="WebApp_ID" version="3.1">
+	<display-name>StudentInfoManage</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>
+	<!-- 用户登录 -->
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>com.sim.web.LoginServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+
+	<!-- 查询班级 -->
+	<servlet>
+		<servlet-name>GradeListServlet</servlet-name>
+		<servlet-class>com.sim.web.GradeListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GradeListServlet</servlet-name>
+		<url-pattern>/gradeList</url-pattern>
+	</servlet-mapping>
+
+	<!-- 班级删除 -->
+	<servlet>
+		<servlet-name>GradeDeleteServlet</servlet-name>
+		<servlet-class>com.sim.web.GradeDeleteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GradeDeleteServlet</servlet-name>
+		<url-pattern>/gradeDelete</url-pattern>
+	</servlet-mapping>
+
+	<!-- 添加、修改班级 -->
+	<servlet>
+		<servlet-name>GradeSaveServlet</servlet-name>
+		<servlet-class>com.sim.web.GradeSaveServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GradeSaveServlet</servlet-name>
+		<url-pattern>/gradeSave</url-pattern>
+	</servlet-mapping>
+
+	<!-- 学生查询 -->
+	<servlet>
+		<servlet-name>StudentListServlet</servlet-name>
+		<servlet-class>com.sim.web.StudentListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StudentListServlet</servlet-name>
+		<url-pattern>/studentList</url-pattern>
+	</servlet-mapping>
+
+
+</web-app>
